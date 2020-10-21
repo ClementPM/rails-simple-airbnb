@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'start generating'
+
+5.times do
+  Flat.create(
+  name:Faker::Restaurant.name, 
+  address:Faker::Address.street_name,
+  description:Faker::Restaurant.description,
+  price_per_night: Faker::Number.decimal,
+  number_of_guests:Faker::Number.decimal_part,
+  )
+end
+
+puts 'end of it'
